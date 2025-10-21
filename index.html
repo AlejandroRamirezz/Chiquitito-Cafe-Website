@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./dist/output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="js/script.js" defer></script>
+    <!-- Command to start watch and keep all the bacground processes running, run it every time you start work -->
+    <!-- npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --watch -->
+    <title>Chiquitito Cafe</title>
+  </head>
+  <body class="relative min-h-screen bg-foam text-color-text">
+    <!-- Nav bar -->
+    <section
+      class="absolute flex items-center justify-between w-full px-16 py-6 bg-white/70"
+    >
+      <!-- Logo -->
+      <img src="imagenes/logo.webp" alt="Logo Chiquitito" class="h-8" />
+      <!-- Menu Container -->
+      <div class="flex items-center justify-around group w-full max-w-md">
+        <a href="#" class="text-lg font-semibold tracking-wide">Inicio</a>
+        <a href="#" class="text-lg font-semibold tracking-wide">Los Cafes</a>
+        <a href="#" class="text-lg font-semibold tracking-wide">Menu</a>
+      </div>
+      <!-- TODO burger menu -->
+    </section>
+    <!-- Hero section -->
+    <section
+      class="h-150 bg-[url('/imagenes/coffee_shop.jpg')] bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center text-white text-center bg-fixed"
+    >
+      <h1 class="text-6xl font-playfair mb-4 -translate-y-30">
+        Chiquitito Café
+      </h1>
+      <p class="text-lg font-outfit max-w-md leading-relaxed -translate-y-30">
+        Meticulous Quality. Local Soul.
+      </p>
+    </section>
+
+    <!-- Best sellers (Cafe preparado) -->
+    <section id="best_sellers" class="w-[80%] mx-auto h-fit py-34">
+      <h2 class="base_h2">Los consentidos de la casa</h2>
+      <!-- Carousel -->
+      <!-- Slider -->
+      <div
+        data-hs-carousel='{
+      "loadingClasses": "opacity-0",
+      "dotsItemClasses": "hs-carousel-active:bg-blue-700 hs-carousel-active:border-blue-700 size-3 border border-gray-400 rounded-full cursor-pointer dark:border-neutral-600 dark:hs-carousel-active:bg-blue-500 dark:hs-carousel-active:border-blue-500",
+      "slidesQty": {
+        "xs": 2,
+        "lg": 3
+      }
+    }'
+        class="relative max-w-4xl mx-auto"
+      >
+        <div
+          class="hs-carousel w-full overflow-hidden bg-white rounded-lg dark:bg-neutral-900"
+        >
+          <div class="relative min-h-108 -mx-1">
+            <!-- transition-transform duration-700 -->
+            <div
+              class="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap opacity-0 transition-transform duration-700"
+            >
+              <div class="hs-carousel-slide px-1">
+                <div
+                  class="flex justify-center h-full bg-gray-100 p-6 dark:bg-neutral-900"
+                >
+                  <span
+                    class="self-center text-sm text-gray-800 transition duration-700 dark:text-white"
+                    >First slide</span
+                  >
+                </div>
+              </div>
+              <div class="hs-carousel-slide px-1">
+                <div
+                  class="flex justify-center h-full bg-gray-200 p-6 dark:bg-neutral-800"
+                >
+                  <span
+                    class="self-center text-sm text-gray-800 transition duration-700 dark:text-white"
+                    >Second slide</span
+                  >
+                </div>
+              </div>
+              <div class="hs-carousel-slide px-1">
+                <div
+                  class="flex justify-center h-full bg-gray-300 p-6 dark:bg-neutral-700"
+                >
+                  <span
+                    class="self-center text-sm text-gray-800 transition duration-700 dark:text-white"
+                    >Third slide</span
+                  >
+                </div>
+              </div>
+              <div class="hs-carousel-slide px-1">
+                <div
+                  class="flex justify-center h-full bg-gray-100 p-6 dark:bg-neutral-900"
+                >
+                  <span
+                    class="self-center text-sm text-gray-800 transition duration-700 dark:text-white"
+                    >Fourth slide</span
+                  >
+                </div>
+              </div>
+              <div class="hs-carousel-slide px-1">
+                <div
+                  class="flex justify-center h-full bg-gray-200 p-6 dark:bg-neutral-800"
+                >
+                  <span
+                    class="self-center text-sm text-gray-800 transition duration-700 dark:text-white"
+                    >Fifth slide</span
+                  >
+                </div>
+              </div>
+              <div class="hs-carousel-slide px-1">
+                <div
+                  class="flex justify-center h-full bg-gray-300 p-6 dark:bg-neutral-700"
+                >
+                  <span
+                    class="self-center text-sm text-gray-800 transition duration-700 dark:text-white"
+                    >Sixth slide</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button
+          type="button"
+          class="hs-carousel-prev hs-carousel-disabled:opacity-50 hs-carousel-disabled:pointer-events-none absolute inset-y-0 start-0 inline-flex justify-center items-center w-11.5 h-full text-gray-800 hover:bg-gray-800/10 focus:outline-hidden focus:bg-gray-800/10 rounded-s-lg dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10 cursor-pointer"
+        >
+          <span class="text-2xl" aria-hidden="true">
+            <svg
+              class="shrink-0 size-5"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="m15 18-6-6 6-6"></path>
+            </svg>
+          </span>
+          <span class="sr-only">Previous</span>
+        </button>
+        <button
+          type="button"
+          class="hs-carousel-next hs-carousel-disabled:opacity-50 hs-carousel-disabled:pointer-events-none absolute inset-y-0 end-0 inline-flex justify-center items-center w-11.5 h-full text-gray-800 hover:bg-gray-800/10 focus:outline-hidden focus:bg-gray-800/10 rounded-e-lg dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10 cursor-pointer"
+        >
+          <span class="sr-only">Next</span>
+          <span class="text-2xl" aria-hidden="true">
+            <svg
+              class="shrink-0 size-5"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="m9 18 6-6-6-6"></path>
+            </svg>
+          </span>
+        </button>
+
+        <div
+          class="hs-carousel-pagination flex justify-center absolute bottom-3 start-0 end-0 gap-x-2"
+        ></div>
+      </div>
+      <!-- End Slider -->
+    </section>
+
+    <!-- Bolsas de Cafe -->
+    <section id="bolsas_cafe" class="w-[70%] mx-auto h-fit py-34">
+      <h2 class="base_h2">El mismo armoa, sin salir de casa</h2>
+      <!-- Grid -->
+      <div
+        class="flex flex-col gap-4 md:grid md:auto-rows-[20rem] md:grid-cols-2 w-full h-fit"
+      >
+        <!-- ITEM 1 -->
+        <div
+          class="grid-items bg-[url('/imagenes/coffee_bag_1.jpg')] group md:col-start-1 md:row-start-1"
+        >
+          <!-- Overlay (background fade) -->
+          <div
+            class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-colors duration-500 rounded-xl"
+          ></div>
+
+          <!-- Title (fade and slide in) -->
+          <h3
+            class="absolute text-2xl tracking-wide top-5 left-5 text-white opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500"
+          >
+            Nuestro Cafe de blah
+          </h3>
+          <p
+            class="absolute bottom-5 left-5 text-base text-white opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500"
+          >
+            Proviniente de blah blah, con notas de blah y aromas accentuados con
+            blah
+          </p>
+        </div>
+        <!-- ITEM 2 -->
+        <div
+          class="group grid-items bg-[url('/imagenes/coffee_bag_2.jpg')] md:col-start-1 md:row-start-2"
+        >
+          <!-- Overlay (background fade) -->
+          <div
+            class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-colors duration-500 rounded-xl"
+          ></div>
+
+          <!-- Title (fade and slide in) -->
+          <h3
+            class="absolute text-2xl tracking-wide top-5 left-5 text-white opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500"
+          >
+            Nuestro Cafe de blah
+          </h3>
+          <p
+            class="absolute bottom-5 left-5 text-base text-white opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500"
+          >
+            Proviniente de blah blah, con notas de blah y aromas accentuados con
+            blah
+          </p>
+        </div>
+        <!-- ITEM 3 -->
+        <div
+          class="group grid-items bg-[url('/imagenes/coffee_bag_3.jpg')] md:col-start-2 md:row-span-2"
+        >
+          <!-- Overlay (background fade) -->
+          <div
+            class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-colors duration-500 rounded-xl"
+          ></div>
+
+          <!-- Title (fade and slide in) -->
+          <h3
+            class="absolute text-2xl tracking-wide top-5 left-5 text-white opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500"
+          >
+            Nuestro Cafe de blah
+          </h3>
+          <p
+            class="absolute bottom-5 left-5 text-base text-white opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500"
+          >
+            Proviniente de blah blah, con notas de blah y aromas accentuados con
+            blah
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Historia de Chiquitito -->
+    <section
+      id="historia"
+      class="flex flex-col items-center justify-center w-[80%] gap-12 h-fit mx-auto lg:flex-row lg:items-start lg:gap-4"
+    >
+      <!-- Texto contenedor -->
+      <div class="flex flex-col gap-4 text-center md:text-left">
+        <h2 class="base_h2 md:text-left">Nuestra Historia</h2>
+        <p class="text-base font-outfit max-w-md">
+          En 2012 nació Chiquitito Café, en el corazón de la colonia Condesa de
+          la Ciudad de México, impulsado por la visión de ofrecer “la mejor taza
+          posible” en un ambiente relajado y auténtico. El nombre “Chiquitito”
+          hace honor al espacio original: un local pequeño, íntimo, pensado para
+          la pausa, la conversación, el aroma del café y la comunidad. <br />
+          <br />
+          Creemos que cada grano cuenta. Desde la finca hasta la taza, nos
+          esforzamos por mantener una cadena de producción lo más transparente y
+          directa posible. Colaboramos con tostadores y productores
+          comprometidos con el origen —por ejemplo, trabajando con Caffè Pecora
+          en Veracruz— para garantizar calidad, trazabilidad y respeto al café
+          de especialidad.
+        </p>
+      </div>
+      <!-- Imagen -->
+      <img
+        src="imagenes/chiquititocafecondesa.webp"
+        alt="Chiquitito Cafe La Condesa"
+        class="w-full rounded-xl lg:w-1/2"
+      />
+    </section>
+
+    <!-- Footer -->
+    <section
+      id="footer"
+      class="h-60 bg-white/70 flex items-center justify-between px-8 mt-24"
+    >
+      <!-- Ciudad/contaco -->
+      <div class="flex flex-col gap-6">
+        <!-- contenedor para svg y texto 1 -->
+        <div
+          class="flex items-center justify-start gap-4 group text-gray-700 hover:text-espresso transition-colors duration-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-label="Ubicación"
+            class="transition-colors duration-300"
+          >
+            <path d="M12 22s7-7.16 7-12a7 7 0 1 0-14 0c0 4.84 7 12 7 12z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
+          <p
+            class="text-sm md:text-base font-outfit transition-colors duration-300"
+          >
+            Ciudad de Mexico, CDMX
+          </p>
+        </div>
+
+        <!-- contenedor para svg y texto 2 -->
+        <div
+          class="flex items-center justify-start gap-4 group hover:text-espresso transition-colors duration-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-label="Correo"
+          >
+            <rect x="3" y="5" width="18" height="14" rx="2" ry="2" />
+            <path d="M3 7l9 6 9-6" />
+          </svg>
+          <p class="text-sm md:text-base font-outfit">
+            info@chiquititocafe.com
+          </p>
+        </div>
+        <!-- contenedor para svg y texto 2 -->
+        <div
+          class="flex items-center justify-start gap-4 group hover:text-espresso transition-colors duration-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-label="Teléfono"
+          >
+            <path
+              d="M22 16.92v2a2 2 0 0 1-2.18 2
+           19.8 19.8 0 0 1-8.62-3.07
+           19.5 19.5 0 0 1-6-6
+           19.8 19.8 0 0 1-3.07-8.62
+           A2 2 0 0 1 4.18 1h2
+           a2 2 0 0 1 2 1.72c.12.9.33 1.77.62 2.6
+           a2 2 0 0 1-.45 2.11L7.09 8.91
+           a16 16 0 0 0 6 6l1.48-1.48
+           a2 2 0 0 1 2.11-.45c.83.29 1.7.5 2.6.62
+           A2 2 0 0 1 22 16.92z"
+            />
+          </svg>
+          <p class="text-sm md:text-base font-outfit">(52)55 6445 2523</p>
+        </div>
+      </div>
+      <!-- Socials -->
+      <div class="flex flex-col gap-6">
+        <!-- Contenedor de SVG y link Instagram -->
+        <div
+          class="flex items-center justify-start text-sm gap-4 group hover:text-espresso transition-colors duration-300 md:text-base"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-label="Instagram"
+          >
+            <rect x="3" y="3" width="18" height="18" rx="5" ry="5" />
+            <circle cx="12" cy="12" r="4" />
+            <circle cx="17.2" cy="6.8" r="1" />
+          </svg>
+          <a
+            href="https://www.instagram.com/chiquititocafe/?hl=en&utm_source=chatgpt.com"
+            target="_blank"
+            class="text-decoration-none"
+            >@chiquititocafe</a
+          >
+        </div>
+        <!-- Contenedor de SVG y link Facebook -->
+        <div
+          class="flex items-center justify-start text-sm gap-4 group hover:text-espresso transition-colors duration-300 md:text-base"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-label="Facebook"
+          >
+            <rect x="3" y="3" width="18" height="18" rx="4" ry="4" />
+            <path
+              d="M13 10h2V7h-2c-1.7 0-3 1.3-3 3v2H8v2h2v5h2v-5h2l.5-2H12v-1c0-.6.4-1 1-1Z"
+            />
+          </svg>
+          <a
+            href="https://www.instagram.com/chiquititocafe/?hl=en&utm_source=chatgpt.com"
+            target="_blank"
+            class="text-decoration-none"
+            >Chiquitito Cafe</a
+          >
+        </div>
+        <!-- Contenedor de SVG y link X (Twitter) -->
+        <div
+          class="flex items-center justify-start text-sm gap-4 group hover:text-espresso transition-colors duration-300 md:text-base"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-label="X (Twitter)"
+          >
+            <path d="M4 4l16 16M20 4L4 20" />
+          </svg>
+          <a
+            href="https://www.instagram.com/chiquititocafe/?hl=en&utm_source=chatgpt.com"
+            target="_blank"
+            class="text-decoration-none"
+            >@ChiquititoCafe</a
+          >
+        </div>
+        <!-- Contenedor de SVG y link Threads -->
+        <div
+          class="flex items-center text-sm justify-start gap-4 group hover:text-espresso transition-colors duration-300 md:text-base"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-label="Threads"
+          >
+            <!-- círculo exterior -->
+            <circle cx="12" cy="12" r="8" />
+            <!-- gesto @ simplificado: trazo interior con cola -->
+            <path
+              d="M15.5 12a3.5 3.5 0 1 1-2.6-3.4M15.5 12c0 2.2-1.4 3.5-3.5 3.5
+           M15.5 12c0-2  -1.5-3.5-3.5-3.5M12 15.5c1.2 0 2-.6 2.5-1.4
+           M15.2 9.4c.6.2 1.1.5 1.6 1"
+            />
+          </svg>
+          <a
+            href="https://www.instagram.com/chiquititocafe/?hl=en&utm_source=chatgpt.com"
+            target="_blank"
+            class="text-decoration-none"
+            >@chiquititocafe</a
+          >
+        </div>
+      </div>
+    </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/preline@3.2.3/dist/preline.min.js"
+      defer
+    ></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Manually initialize all carousels
+        window.HSCarousel?.autoInit();
+      });
+    </script>
+  </body>
+</html>

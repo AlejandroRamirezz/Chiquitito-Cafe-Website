@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --color-espresso: #726555; /* primary buttons / headings */
+  --color-foam: #eae8d7; /* backgrounds */
+  --color-accent: #72a4a9; /* highlights */
+  --color-text: #405a5a; /* paragraph text */
+
+  --font-sans: "Outfit", sans-serif;
+  --font-bebas: "Bebas Neue", sans-serif;
+  --font-playfair: "Playfair Display SC", serif;
+}
+
+@layer components {
+  .base_h2 {
+    @apply text-4xl text-center font-bebas pb-12 lg:text-5xl;
+  }
+  .grid-items {
+    @apply relative w-full rounded-xl bg-gray-300 bg-cover bg-center bg-no-repeat overflow-hidden h-[20rem] md:h-full;
+  }
+}
