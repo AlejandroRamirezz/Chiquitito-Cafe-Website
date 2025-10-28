@@ -37,6 +37,14 @@
   .sucursales_container {
     @apply flex flex-col gap-8 items-center justify-center mx-auto w-full md:flex-row;
   }
+
+  .div_sucursal {
+    @apply absolute flex flex-col items-start justify-around bg-espresso/90 bottom-0 left-0 right-0 h-fit px-3 py-3 rounded-b-xl gap-3;
+  }
+
+  .sucursal_link {
+    @apply bg-white text-espresso px-4 py-2 border-2 border-white rounded-xl hover:bg-espresso transition-colors hover:text-white;
+  }
 }
 
 /* Hamburger Menu */
