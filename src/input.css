@@ -18,6 +18,25 @@
   .grid-items {
     @apply relative w-full rounded-xl bg-gray-300 bg-cover bg-center bg-no-repeat overflow-hidden h-[20rem] md:h-full;
   }
+  .inputs {
+    @apply bg-white rounded-xl w-[80%] border-2 border-black p-2;
+  }
+
+  .contenedor_il {
+    @apply flex flex-col items-start w-full py-4;
+  }
+
+  .contenedor_2i {
+    @apply flex flex-col md:flex-row w-full flex-nowrap items-center justify-between;
+  }
+
+  .sucursal_card {
+    @apply relative flex flex-col w-full max-w-sm md:max-w-lg h-[400px] rounded-xl bg-center bg-cover bg-no-repeat;
+  }
+
+  .sucursales_container {
+    @apply flex flex-col gap-8 items-center justify-center mx-auto w-full md:flex-row;
+  }
 }
 
 /* Hamburger Menu */
