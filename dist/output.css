@@ -6,7 +6,6 @@
     --font-sans: "Outfit", sans-serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-900: oklch(39.6% 0.141 25.723);
     --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-gray-400: oklch(70.7% 0.022 261.325);
@@ -351,6 +350,9 @@
   .h-60 {
     height: calc(var(--spacing) * 60);
   }
+  .h-\[20rem\] {
+    height: 20rem;
+  }
   .h-\[60vh\] {
     height: 60vh;
   }
@@ -607,15 +609,6 @@
   .bg-\[url\(\'\/imagenes\/chiquititocafecondesa\.webp\'\)\] {
     background-image: url('/imagenes/chiquititocafecondesa.webp');
   }
-  .bg-\[url\(\'\/imagenes\/coffee_bag_1\.jpg\'\)\] {
-    background-image: url('/imagenes/coffee_bag_1.jpg');
-  }
-  .bg-\[url\(\'\/imagenes\/coffee_bag_2\.jpg\'\)\] {
-    background-image: url('/imagenes/coffee_bag_2.jpg');
-  }
-  .bg-\[url\(\'\/imagenes\/coffee_bag_3\.jpg\'\)\] {
-    background-image: url('/imagenes/coffee_bag_3.jpg');
-  }
   .bg-\[url\(\'\/imagenes\/coffee_reservation\.jpg\'\)\] {
     background-image: url('/imagenes/coffee_reservation.jpg');
   }
@@ -654,6 +647,9 @@
   }
   .bg-no-repeat {
     background-repeat: no-repeat;
+  }
+  .object-cover {
+    object-fit: cover;
   }
   .p-6 {
     padding: calc(var(--spacing) * 6);
@@ -934,11 +930,6 @@
       grid-row: span 2 / span 2;
     }
   }
-  .md\:row-start-1 {
-    @media (width >= 48rem) {
-      grid-row-start: 1;
-    }
-  }
   .md\:row-start-2 {
     @media (width >= 48rem) {
       grid-row-start: 2;
@@ -962,6 +953,11 @@
   .md\:h-\[300px\] {
     @media (width >= 48rem) {
       height: 300px;
+    }
+  }
+  .md\:h-full {
+    @media (width >= 48rem) {
+      height: 100%;
     }
   }
   .md\:min-h-\[70svh\] {
@@ -1229,20 +1225,6 @@
     @media (width >= 64rem) {
       font-size: var(--text-5xl);
       line-height: var(--tw-leading, var(--text-5xl--line-height));
-    }
-  }
-  .grid-items {
-    position: relative;
-    height: 20rem;
-    width: 100%;
-    overflow: hidden;
-    border-radius: var(--radius-xl);
-    background-color: var(--color-gray-300);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    @media (width >= 48rem) {
-      height: 100%;
     }
   }
   .inputs {

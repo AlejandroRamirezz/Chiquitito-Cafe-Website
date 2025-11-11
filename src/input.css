@@ -15,9 +15,7 @@
   .base_h2 {
     @apply text-4xl text-center font-bebas pb-12 lg:text-5xl;
   }
-  .grid-items {
-    @apply relative w-full rounded-xl bg-gray-300 bg-cover bg-center bg-no-repeat overflow-hidden h-[20rem] md:h-full;
-  }
+
   .inputs {
     @apply bg-white rounded-xl w-[80%] border-2 border-black p-2;
   }

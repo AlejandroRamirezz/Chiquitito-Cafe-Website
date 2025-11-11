@@ -11,24 +11,42 @@
       rel="stylesheet"
     />
 
+    <link rel="preload" href="/dist/output.css" as="style" />
     <script src="js/script.js" defer></script>
     <title>Chiquitito Café</title>
   </head>
   <body
     class="relative flex flex-col min-h-screen bg-foam text-color-text gap-30"
   >
-    <!-- BG image -->
-    <div
-      class="absolute inset-0 bg-[url('/imagenes/bg_coffee_shop.jpg')] bg-center bg-cover bg-no-repeat"
-    ></div>
+    <!-- BG image (optimized) -->
+    <img
+      src="/imagenes/bg_coffee_shop.jpg"
+      alt="Interior de cafetería Chiquitito Café"
+      decoding="async"
+      loading="eager"
+      fetchpriority="high"
+      class="absolute inset-0 w-full h-full object-cover"
+      width="1920"
+      height="1080"
+    />
+
     <!-- Black overlay -->
     <div class="absolute inset-0 bg-black/70"></div>
+
     <!-- Nav bar -->
     <section
-      class="absolute flex items-center justify-between w-full px-4 lg:px-16 py-6 bg-white/70"
+      class="absolute flex items-center justify-between w-full px-4 lg:px-16 py-6 bg-white/70 z-20"
     >
       <!-- Logo -->
-      <img src="imagenes/logo.webp" alt="Logo Chiquitito" class="h-8" />
+      <img
+        src="imagenes/logo.webp"
+        alt="Logo Chiquitito Café"
+        class="h-8"
+        width="180"
+        height="60"
+        decoding="async"
+        fetchpriority="high"
+      />
 
       <!-- Links (desktop) -->
       <nav
@@ -81,7 +99,7 @@
     >
       <!-- Menu section -->
       <section
-        class="w-full mx-auto flex flex-col md:flex-row items-start justify-between h-[200px] gap-10 md:h-[300px] z-20"
+        class="w-full mx-auto flex flex-col md:flex-row items-start justify-between gap-10 md:h-[300px] z-20"
       >
         <!-- Título y button -->
         <div
@@ -102,19 +120,41 @@
           </a>
         </div>
 
-        <!-- Imagen -->
+        <!-- Optimized image -->
         <div
-          class="bg-[url('/imagenes/imagen_menu.jpg')] bg-cover bg-center bg-no-repeat h-[400px] w-2/3 rounded-lg hidden lg:inline"
-        ></div>
+          class="relative hidden lg:inline w-2/3 h-[400px] rounded-lg overflow-hidden"
+        >
+          <img
+            src="/imagenes/imagen_menu.jpg"
+            alt="Taza de café sobre mesa en Chiquitito Café"
+            class="absolute inset-0 w-full h-full object-cover"
+            loading="lazy"
+            decoding="async"
+            width="800"
+            height="600"
+          />
+        </div>
       </section>
+
       <!-- Reservación/Ordenar en línea -->
       <section
-        class="w-full mx-auto flex flex-col md:flex-row items-center justify-between h-[200px] gap-10 md:h-[300px] z-20"
+        class="w-full mx-auto flex flex-col md:flex-row items-center justify-between gap-10 md:h-[300px] z-20"
       >
-        <!-- Imagen -->
+        <!-- Optimized image -->
         <div
-          class="bg-[url('/imagenes/coffee_reservation.jpg')] bg-cover bg-center bg-no-repeat h-[400px] w-2/3 rounded-lg hidden lg:inline"
-        ></div>
+          class="relative hidden lg:inline w-2/3 h-[400px] rounded-lg overflow-hidden"
+        >
+          <img
+            src="/imagenes/coffee_reservation.jpg"
+            alt="Barista sirviendo café en Chiquitito Café"
+            class="absolute inset-0 w-full h-full object-cover"
+            loading="lazy"
+            decoding="async"
+            width="800"
+            height="600"
+          />
+        </div>
+
         <!-- Título y button -->
         <div
           class="flex flex-col items-center justify-between gap-5 h-full lg:items-end"
@@ -138,6 +178,7 @@
           </div>
         </div>
       </section>
+
       <!-- Playlist de Spotify -->
       <section
         class="w-full mx-auto flex flex-col md:flex-row items-center justify-between h-[300px] gap-10 z-20"
@@ -155,7 +196,6 @@
 
         <!-- Spotify embed -->
         <iframe
-          data-testid="embed-iframe"
           style="border-radius: 12px"
           src="https://open.spotify.com/embed/playlist/3DuSQO2oKLYekyeq0cDruY?utm_source=generator&theme=0"
           width="100%"
@@ -225,6 +265,7 @@
             info@chiquititocafe.com
           </p>
         </div>
+
         <!-- contenedor para svg y texto 3 -->
         <div
           class="flex items-center justify-start gap-2 group hover:text-espresso transition-colors duration-300"
@@ -256,6 +297,7 @@
           </svg>
           <p class="text-sm md:text-base font-outfit">(52)55 6445 2523</p>
         </div>
+
         <!-- Contenedor para Facturación -->
         <a
           href="./facturacion.html"
@@ -276,23 +318,19 @@
             role="img"
             aria-label="Ir a facturación"
           >
-            <!-- Borde tipo recibo -->
             <path d="M7 3l2 1 2-1 2 1 2-1 2 1v16l-2-1-2 1-2-1-2 1-2-1V3z" />
-            <!-- Texto líneas -->
             <path d="M8.5 8h7" />
             <path d="M8.5 11h7" />
             <path d="M8.5 14h5" />
-            <!-- Flecha externa (indicando 'link') -->
             <path d="M15.5 6h3v3" />
             <path d="M18.5 6l-4 4" />
           </svg>
-
           <span>Facturación</span>
         </a>
       </div>
+
       <!-- Socials -->
       <div class="flex flex-col gap-3">
-        <!-- Contenedor de SVG y link Instagram -->
         <div
           class="flex items-center justify-start text-sm gap-2 group hover:text-espresso transition-colors duration-300 md:text-base cursor-pointer"
         >
@@ -313,13 +351,12 @@
             <circle cx="17.2" cy="6.8" r="1" />
           </svg>
           <a
-            href="https://www.instagram.com/chiquititocafe/?hl=en&utm_source=chatgpt.com"
+            href="https://www.instagram.com/chiquititocafe/?hl=en"
             target="_blank"
             class="text-decoration-none text-xs md:text-base"
             >@chiquititocafe</a
           >
         </div>
-        <!-- Contenedor de SVG y link Facebook -->
         <div
           class="flex items-center justify-start text-sm gap-2 group hover:text-espresso transition-colors duration-300 md:text-base cursor-pointer"
         >
@@ -341,13 +378,12 @@
             />
           </svg>
           <a
-            href="https://www.facebook.com/chiquititocafe/?utm_source=chatgpt.com"
+            href="https://www.facebook.com/chiquititocafe/"
             target="_blank"
             class="text-decoration-none text-xs md:text-base"
             >Chiquitito Café</a
           >
         </div>
-        <!-- Contenedor de SVG y link X (Twitter) -->
         <div
           class="flex items-center justify-start text-sm gap-2 group hover:text-espresso transition-colors duration-300 md:text-base cursor-pointer"
         >
@@ -366,13 +402,12 @@
             <path d="M4 4l16 16M20 4L4 20" />
           </svg>
           <a
-            href="https://x.com/chiquititocafe?lang=en&utm_source=chatgpt.com"
+            href="https://x.com/chiquititocafe"
             target="_blank"
             class="text-decoration-none text-xs md:text-base"
             >@ChiquititoCafé</a
           >
         </div>
-        <!-- Contenedor de SVG y link Threads -->
         <div
           class="flex items-center text-sm justify-start gap-2 group hover:text-espresso transition-colors duration-300 md:text-base cursor-pointer"
         >
@@ -388,9 +423,7 @@
             stroke-linejoin="round"
             aria-label="Threads"
           >
-            <!-- círculo exterior -->
             <circle cx="12" cy="12" r="8" />
-            <!-- gesto @ simplificado: trazo interior con cola -->
             <path
               d="M15.5 12a3.5 3.5 0 1 1-2.6-3.4M15.5 12c0 2.2-1.4 3.5-3.5 3.5
            M15.5 12c0-2  -1.5-3.5-3.5-3.5M12 15.5c1.2 0 2-.6 2.5-1.4
@@ -398,7 +431,7 @@
             />
           </svg>
           <a
-            href="https://www.threads.com/%40chiquititocafe?utm_source=chatgpt.com"
+            href="https://www.threads.net/@chiquititocafe"
             target="_blank"
             class="text-decoration-none text-xs md:text-base"
             >@chiquititocafe</a
@@ -406,6 +439,7 @@
         </div>
       </div>
     </section>
+
     <script
       src="https://cdn.jsdelivr.net/npm/preline@3.2.3/dist/preline.min.js"
       defer
@@ -413,7 +447,6 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        // Manually initialize all carousels
         window.HSCarousel?.autoInit();
       });
     </script>

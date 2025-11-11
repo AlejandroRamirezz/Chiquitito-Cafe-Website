@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
 
+    <link rel="preload" href="/dist/output.css" as="style" />
     <script src="js/script.js" defer></script>
     <title>Chiquitito Café</title>
   </head>
@@ -54,32 +55,46 @@
         class="fixed inset-0 z-20 hidden flex-col items-center w-full h-full min-h-screen px-6 pt-28 pb-6 tracking-widest text-gray-900 bg-foam/95"
       >
         <div class="w-full py-3 text-center border-b border-gray-200">
-          <a href="index.html" class="block text-lg hover:text-espresso">Inicio</a>
+          <a href="index.html" class="block text-lg hover:text-espresso"
+            >Inicio</a
+          >
         </div>
         <div class="w-full py-3 text-center border-b border-gray-200">
-          <a href="los_cafes.html" class="block text-lg hover:text-espresso">Los Cafés</a>
+          <a href="los_cafes.html" class="block text-lg hover:text-espresso"
+            >Los Cafés</a
+          >
         </div>
         <div class="w-full py-3 text-center">
           <a href="menu.html" class="block text-lg hover:text-espresso">Menú</a>
         </div>
       </div>
     </section>
-    
-    
 
-    <!-- Hero section  -->
+    <!-- Hero section -->
     <section
-      class="relative flex flex-col gap-4 md:flex-row w-full min-h-[60svh] bg-[url('/imagenes/coffee_shop_background.jpg')] bg-center bg-cover bg-no-repeat items-center justify-center text-white"
+      class="relative flex flex-col gap-4 md:flex-row w-full min-h-[60svh] items-center justify-center text-white overflow-hidden"
     >
+      <!-- Hero image -->
+      <img
+        src="/imagenes/coffee_shop_background.jpg"
+        alt="Interior de Chiquitito Café"
+        loading="eager"
+        decoding="async"
+        fetchpriority="high"
+        class="absolute inset-0 w-full h-full object-cover"
+        width="1600"
+        height="900"
+      />
+
       <!-- Overlay -->
       <div class="absolute inset-0 bg-black/50"></div>
 
-      <!-- Content (z-index above overlay) -->
+      <!-- Content (above overlay) -->
       <div
-        class="relative z-10 flex flex-col md:flex-row items-center justify-center gap-4"
+        class="relative z-10 flex flex-col md:flex-row items-center justify-center gap-4 text-center md:text-left px-4"
       >
         <h1
-          class="text-5xl w-full max-w-md md:text-6xl text-center lg:text-left md:max-w-xl"
+          class="text-5xl w-full max-w-md md:text-6xl lg:text-left md:max-w-xl font-playfair leading-tight"
         >
           ¡Encuentra un Chiquitito cerca de ti!
         </h1>
@@ -93,61 +108,107 @@
       <!-- Container top -->
       <div class="sucursales_container">
         <!-- Sucursal 1 -->
-        <div
-          class="sucursal_card bg-[url('/imagenes/lomas_de_chapultepec.webp')]"
-        >
-          <div
-            class="div_sucursal"
-          >
+        <div class="sucursal_card overflow-hidden">
+          <img
+            src="/imagenes/lomas_de_chapultepec.webp"
+            alt="Chiquitito Café Lomas de Chapultepec, interior del local"
+            loading="lazy"
+            decoding="async"
+            class="absolute inset-0 w-full h-full object-cover"
+            width="800"
+            height="600"
+          />
+          <div class="div_sucursal">
             <p class="text-white text-xl tracking-wide font-playfair">
               Chiquitito Café Lomas de Chapultepec
             </p>
             <p class="text-white/80 text-md font-outfit">
               Prado Norte 421, Col. Lomas de Chapultepec
             </p>
-            <a href="https://www.google.com/maps/dir/?api=1&destination=Av.+Prado+Norte+421,+Lomas-Virreyes,+Lomas+de+Chapultepec,+CDMX" class="sucursal_link" target="_blank">Cómo llegar</a>
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=Av.+Prado+Norte+421,+Lomas-Virreyes,+Lomas+de+Chapultepec,+CDMX"
+              class="sucursal_link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Cómo llegar
+            </a>
           </div>
         </div>
-  
+
         <!-- Sucursal 2 -->
-        <div
-          class="sucursal_card bg-[url('/imagenes/chiquititocafecondesa.webp')]"
-        >
-          <div
-            class="div_sucursal"
-          >
+        <div class="sucursal_card overflow-hidden">
+          <img
+            src="/imagenes/chiquititocafecondesa.webp"
+            alt="Chiquitito Café La Condesa, fachada principal"
+            loading="lazy"
+            decoding="async"
+            class="absolute inset-0 w-full h-full object-cover"
+            width="800"
+            height="600"
+          />
+          <div class="div_sucursal">
             <p class="text-white text-xl tracking-wide font-playfair">
               Chiquitito Café La Condesa
             </p>
             <p class="text-white/80 text-md font-outfit">
               Alfonso Reyes 232, Col. Condesa
             </p>
-            <a href="https://www.google.com/maps/dir/?api=1&destination=Alfonso+Reyes+232,+Hipódromo,+Cuauhtémoc,+CDMX" class="sucursal_link" target="_blank">Cómo llegar</a>
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=Alfonso+Reyes+232,+Hipódromo,+Cuauhtémoc,+CDMX"
+              class="sucursal_link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Cómo llegar
+            </a>
           </div>
         </div>
       </div>
+
       <!-- Container bottom -->
       <div class="sucursales_container">
         <!-- Sucursal 3 -->
-        <div class="sucursal_card bg-[url('/imagenes/cuahutemoc.webp')]">
-          <div
-            class="div_sucursal"
-          >
+        <div class="sucursal_card overflow-hidden">
+          <img
+            src="/imagenes/cuahutemoc.webp"
+            alt="Chiquitito Café Cuauhtémoc, vista exterior"
+            loading="lazy"
+            decoding="async"
+            class="absolute inset-0 w-full h-full object-cover"
+            width="800"
+            height="600"
+          />
+          <div class="div_sucursal">
             <p class="text-white text-xl tracking-wide font-playfair">
               Chiquitito Café Cuauhtémoc
             </p>
             <p class="text-white/80 text-md font-outfit">
               Río Lerma 179, Col. Cuauhtémoc
             </p>
-            <a href="https://www.google.com/maps/dir/?api=1&destination=C.+Río+Lerma+179,+Cuauhtémoc,+CDMX" class="sucursal_link" target="_blank">Cómo llegar</a>
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=C.+Río+Lerma+179,+Cuauhtémoc,+CDMX"
+              class="sucursal_link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Cómo llegar
+            </a>
           </div>
         </div>
-  
+
         <!-- Sucursal 4 -->
-        <div class="sucursal_card bg-[url('/imagenes/chiquitito_libros.webp')]">
-          <div
-            class="div_sucursal"
-          >
+        <div class="sucursal_card overflow-hidden">
+          <img
+            src="/imagenes/chiquitito_libros.webp"
+            alt="Chiquitito Café Libros Libros Libros, librería con cafetería"
+            loading="lazy"
+            decoding="async"
+            class="absolute inset-0 w-full h-full object-cover"
+            width="800"
+            height="600"
+          />
+          <div class="div_sucursal">
             <p class="text-white text-xl tracking-wide font-playfair">
               Chiquitito Café Libros Libros Libros
             </p>
@@ -155,17 +216,16 @@
               Monte Ararat 220, Col. Lomas de Chapultepec
             </p>
             <a
-            href="https://www.google.com/maps/dir/?api=1&destination=Chiquitito+Cafe,Condesa"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-block bg-white text-espresso px-4 py-2 border-2 border-white rounded-xl hover:bg-espresso transition-colors hover:text-white"
-          >
-            Cómo llegar
-        </a>
-
+              href="https://www.google.com/maps/dir/?api=1&destination=Chiquitito+Cafe,Condesa"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="sucursal_link"
+            >
+              Cómo llegar
+            </a>
           </div>
+        </div>
       </div>
-
     </section>
 
     <!-- Footer -->
