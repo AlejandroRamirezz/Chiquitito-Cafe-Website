@@ -1,6 +1,6 @@
 {
-  "buildCommand": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --minify",
-  "outputDirectory": ".",
+  "buildCommand": "npx @tailwindcss/cli -i ./src/input.css -o ./public/dist/output.css --minify",
+  "outputDirectory": "public",
   "cleanUrls": true,
   "headers": [
     {
