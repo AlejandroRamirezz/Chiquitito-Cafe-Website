@@ -18,10 +18,6 @@ Thumbs.db
 .env.local
 .env.*.local
 
-# Temporary image folders (optional)
-imagenes_avif_rest/
-imagenes_webp_rest/
-
 # Sharp cache or temp (if ever created)
 sharp-cache/
 tmp/
