@@ -1,1 +1,27 @@
-node_modules
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+package-lock.json
+
+# Vercel build output (auto-generated)
+.vercel/
+.next/
+dist/
+out/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Local environment configs
+.env
+.env.local
+.env.*.local
+
+# Temporary image folders (optional)
+imagenes_avif_rest/
+imagenes_webp_rest/
+
+# Sharp cache or temp (if ever created)
+sharp-cache/
+tmp/

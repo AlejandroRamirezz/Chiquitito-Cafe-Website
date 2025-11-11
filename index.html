@@ -27,7 +27,14 @@
       class="absolute flex items-center justify-between w-full px-4 lg:px-16 py-6 bg-white/70"
     >
       <!-- Logo -->
-      <img src="imagenes/logo.webp" alt="Logo Chiquitito" class="h-8" />
+      <img
+        src="imagenes/logo.webp"
+        alt="Logo Chiquitito Café"
+        width="176"
+        height="32"
+        decoding="async"
+        fetchpriority="high"
+      />
 
       <!-- Links (desktop) -->
       <nav
@@ -76,7 +83,7 @@
 
     <!-- Hero section -->
     <section
-      class="min-h-[60svh] bg-[url('/imagenes/coffee_shop.jpg')] bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center text-white text-center md:bg-fixed md:min-h-[70svh]"
+      class="hero-bg-coffee-shop min-h-[60svh] md:min-h-[70svh] flex flex-col items-center justify-center text-white text-center md:bg-fixed"
     >
       <h1 class="text-4xl font-playfair mb-4 -translate-y-10 md:text-6xl">
         Chiquitito Café
@@ -233,9 +240,10 @@
       </div>
     </section>
 
-    <!-- Bolsas de Cafe -->
+    <!-- Bolsas de Café -->
     <section id="bolsas_cafe" class="w-[70%] mx-auto h-fit">
-      <h2 class="base_h2">El mismo armoa, sin salir de casa</h2>
+      <h2 class="base_h2">El mismo aroma, sin salir de casa</h2>
+
       <!-- Grid -->
       <div
         class="flex flex-col gap-4 md:grid md:auto-rows-[20rem] md:grid-cols-2 w-full h-fit"
@@ -244,13 +252,23 @@
         <div
           class="relative w-full h-[20rem] md:h-full rounded-xl overflow-hidden group"
         >
-          <img
-            src="/imagenes/coffee_bag_1.jpg"
-            alt="Bolsa de café Chiquitito"
-            loading="lazy"
-            decoding="async"
-            class="absolute inset-0 w-full h-full object-cover"
-          />
+          <picture>
+            <source
+              type="image/avif"
+              srcset="/imagenes_avif_rest/coffee_bag_1.avif"
+            />
+            <source
+              type="image/webp"
+              srcset="/imagenes_webp_rest/coffee_bag_1.webp"
+            />
+            <img
+              src="/imagenes/coffee_bag_1.jpg"
+              alt="Bolsa de café Chiquitito"
+              loading="lazy"
+              decoding="async"
+              class="absolute inset-0 w-full h-full object-cover"
+            />
+          </picture>
 
           <div
             class="absolute inset-0 bg-black/60 md:bg-black/0 md:group-hover:bg-black/60 transition-colors duration-500 rounded-xl"
@@ -274,13 +292,23 @@
         <div
           class="relative w-full h-[20rem] md:h-full rounded-xl overflow-hidden group md:col-start-1 md:row-start-2"
         >
-          <img
-            src="/imagenes/coffee_bag_2.jpg"
-            alt="Bolsa de café tostado Chiquitito"
-            loading="lazy"
-            decoding="async"
-            class="absolute inset-0 w-full h-full object-cover"
-          />
+          <picture>
+            <source
+              type="image/avif"
+              srcset="/imagenes_avif_rest/coffee_bag_2.avif"
+            />
+            <source
+              type="image/webp"
+              srcset="/imagenes_webp_rest/coffee_bag_2.webp"
+            />
+            <img
+              src="/imagenes/coffee_bag_2.jpg"
+              alt="Bolsa de café tostado Chiquitito"
+              loading="lazy"
+              decoding="async"
+              class="absolute inset-0 w-full h-full object-cover"
+            />
+          </picture>
 
           <div
             class="absolute inset-0 bg-black/60 md:bg-black/0 md:group-hover:bg-black/60 transition-colors duration-500 rounded-xl"
@@ -304,13 +332,23 @@
         <div
           class="relative w-full h-[20rem] md:h-full rounded-xl overflow-hidden group md:col-start-2 md:row-span-2"
         >
-          <img
-            src="/imagenes/coffee_bag_3.jpg"
-            alt="Bolsa de café molido Chiquitito"
-            loading="lazy"
-            decoding="async"
-            class="absolute inset-0 w-full h-full object-cover"
-          />
+          <picture>
+            <source
+              type="image/avif"
+              srcset="/imagenes_avif_rest/coffee_bag_3.avif"
+            />
+            <source
+              type="image/webp"
+              srcset="/imagenes_webp_rest/coffee_bag_3.webp"
+            />
+            <img
+              src="/imagenes/coffee_bag_3.jpg"
+              alt="Bolsa de café molido Chiquitito"
+              loading="lazy"
+              decoding="async"
+              class="absolute inset-0 w-full h-full object-cover"
+            />
+          </picture>
 
           <div
             class="absolute inset-0 bg-black/60 md:bg-black/0 md:group-hover:bg-black/60 transition-colors duration-500 rounded-xl"
@@ -345,24 +383,35 @@
           la Ciudad de México, impulsado por la visión de ofrecer “la mejor taza
           posible” en un ambiente relajado y auténtico. El nombre “Chiquitito”
           hace honor al espacio original: un local pequeño, íntimo, pensado para
-          la pausa, la conversación, el aroma del café y la comunidad. <br />
-          <br />
+          la pausa, la conversación, el aroma del café y la comunidad.
+          <br /><br />
           Creemos que cada grano cuenta. Desde la finca hasta la taza, nos
           esforzamos por mantener una cadena de producción lo más transparente y
           directa posible. Colaboramos con tostadores y productores
-          comprometidos con el origen —por ejemplo, trabajando con Caffè Pecora
+          comprometidos con el origen —por ejemplo, trabajando con Caffè Pecora
           en Veracruz— para garantizar calidad, trazabilidad y respeto al café
           de especialidad.
         </p>
       </div>
-      <!-- Imagen -->
-      <img
-        src="imagenes/chiquititocafecondesa.webp"
-        alt="Chiquitito Cafe La Condesa"
-        class="w-full rounded-xl lg:w-1/2"
-        loading="lazy"
-        decoding="async"
-      />
+
+      <!-- Imagen optimizada -->
+      <picture class="w-full lg:w-1/2">
+        <source
+          type="image/avif"
+          srcset="/imagenes_avif_rest/chiquititocafecondesa.avif"
+        />
+        <source
+          type="image/webp"
+          srcset="/imagenes_webp_rest/chiquititocafecondesa.webp"
+        />
+        <img
+          src="/imagenes/chiquititocafecondesa.webp"
+          alt="Chiquitito Café La Condesa"
+          class="w-full rounded-xl object-cover"
+          loading="lazy"
+          decoding="async"
+        />
+      </picture>
     </section>
 
     <!-- Footer -->

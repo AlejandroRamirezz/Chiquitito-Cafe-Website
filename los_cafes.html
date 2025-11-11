@@ -23,7 +23,14 @@
       class="absolute flex items-center justify-between w-full px-4 lg:px-16 py-6 bg-white/70 z-100"
     >
       <!-- Logo -->
-      <img src="imagenes/logo.webp" alt="Logo Chiquitito" class="h-8" />
+      <img
+        src="imagenes/logo.webp"
+        alt="Logo Chiquitito Café"
+        width="176"
+        height="32"
+        decoding="async"
+        fetchpriority="high"
+      />
 
       <!-- Links (desktop) -->
       <nav
@@ -75,16 +82,26 @@
       class="relative flex flex-col gap-4 md:flex-row w-full min-h-[60svh] items-center justify-center text-white overflow-hidden"
     >
       <!-- Hero image -->
-      <img
-        src="/imagenes/coffee_shop_background.jpg"
-        alt="Interior de Chiquitito Café"
-        loading="eager"
-        decoding="async"
-        fetchpriority="high"
-        class="absolute inset-0 w-full h-full object-cover"
-        width="1600"
-        height="900"
-      />
+      <picture>
+        <source
+          srcset="/imagenes_avif_rest/coffee_shop_background.avif"
+          type="image/avif"
+        />
+        <source
+          srcset="/imagenes_webp_rest/coffee_shop_background.webp"
+          type="image/webp"
+        />
+        <img
+          src="/imagenes/coffee_shop_background.jpg"
+          alt="Interior de Chiquitito Café"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+          class="absolute inset-0 w-full h-full object-cover"
+          width="1600"
+          height="900"
+        />
+      </picture>
 
       <!-- Overlay -->
       <div class="absolute inset-0 bg-black/50"></div>
@@ -109,15 +126,25 @@
       <div class="sucursales_container">
         <!-- Sucursal 1 -->
         <div class="sucursal_card overflow-hidden">
-          <img
-            src="/imagenes/lomas_de_chapultepec.webp"
-            alt="Chiquitito Café Lomas de Chapultepec, interior del local"
-            loading="lazy"
-            decoding="async"
-            class="absolute inset-0 w-full h-full object-cover"
-            width="800"
-            height="600"
-          />
+          <picture>
+            <source
+              srcset="/imagenes_avif_rest/lomas_de_chapultepec.avif"
+              type="image/avif"
+            />
+            <source
+              srcset="/imagenes_webp_rest/lomas_de_chapultepec.webp"
+              type="image/webp"
+            />
+            <img
+              src="/imagenes/lomas_de_chapultepec.jpg"
+              alt="Chiquitito Café Lomas de Chapultepec, interior del local"
+              loading="lazy"
+              decoding="async"
+              class="absolute inset-0 w-full h-full object-cover"
+              width="800"
+              height="600"
+            />
+          </picture>
           <div class="div_sucursal">
             <p class="text-white text-xl tracking-wide font-playfair">
               Chiquitito Café Lomas de Chapultepec
@@ -138,15 +165,25 @@
 
         <!-- Sucursal 2 -->
         <div class="sucursal_card overflow-hidden">
-          <img
-            src="/imagenes/chiquititocafecondesa.webp"
-            alt="Chiquitito Café La Condesa, fachada principal"
-            loading="lazy"
-            decoding="async"
-            class="absolute inset-0 w-full h-full object-cover"
-            width="800"
-            height="600"
-          />
+          <picture>
+            <source
+              srcset="/imagenes_avif_rest/chiquititocafecondesa.avif"
+              type="image/avif"
+            />
+            <source
+              srcset="/imagenes_webp_rest/chiquititocafecondesa.webp"
+              type="image/webp"
+            />
+            <img
+              src="/imagenes/chiquititocafecondesa.webp"
+              alt="Chiquitito Café La Condesa, fachada principal"
+              loading="lazy"
+              decoding="async"
+              class="absolute inset-0 w-full h-full object-cover"
+              width="800"
+              height="600"
+            />
+          </picture>
           <div class="div_sucursal">
             <p class="text-white text-xl tracking-wide font-playfair">
               Chiquitito Café La Condesa
@@ -170,15 +207,25 @@
       <div class="sucursales_container">
         <!-- Sucursal 3 -->
         <div class="sucursal_card overflow-hidden">
-          <img
-            src="/imagenes/cuahutemoc.webp"
-            alt="Chiquitito Café Cuauhtémoc, vista exterior"
-            loading="lazy"
-            decoding="async"
-            class="absolute inset-0 w-full h-full object-cover"
-            width="800"
-            height="600"
-          />
+          <picture>
+            <source
+              srcset="/imagenes_avif_rest/cuahutemoc.avif"
+              type="image/avif"
+            />
+            <source
+              srcset="/imagenes_webp_rest/cuahutemoc.webp"
+              type="image/webp"
+            />
+            <img
+              src="/imagenes/cuahutemoc.jpg"
+              alt="Chiquitito Café Cuauhtémoc, vista exterior"
+              loading="lazy"
+              decoding="async"
+              class="absolute inset-0 w-full h-full object-cover"
+              width="800"
+              height="600"
+            />
+          </picture>
           <div class="div_sucursal">
             <p class="text-white text-xl tracking-wide font-playfair">
               Chiquitito Café Cuauhtémoc
@@ -199,15 +246,25 @@
 
         <!-- Sucursal 4 -->
         <div class="sucursal_card overflow-hidden">
-          <img
-            src="/imagenes/chiquitito_libros.webp"
-            alt="Chiquitito Café Libros Libros Libros, librería con cafetería"
-            loading="lazy"
-            decoding="async"
-            class="absolute inset-0 w-full h-full object-cover"
-            width="800"
-            height="600"
-          />
+          <picture>
+            <source
+              srcset="/imagenes_avif_rest/chiquitito_libros.avif"
+              type="image/avif"
+            />
+            <source
+              srcset="/imagenes_webp_rest/chiquitito_libros.webp"
+              type="image/webp"
+            />
+            <img
+              src="/imagenes/chiquitito_libros.jpg"
+              alt="Chiquitito Café Libros Libros Libros, librería con cafetería"
+              loading="lazy"
+              decoding="async"
+              class="absolute inset-0 w-full h-full object-cover"
+              width="800"
+              height="600"
+            />
+          </picture>
           <div class="div_sucursal">
             <p class="text-white text-xl tracking-wide font-playfair">
               Chiquitito Café Libros Libros Libros
