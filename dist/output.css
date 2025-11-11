@@ -1288,7 +1288,7 @@
     }
   }
   .hero-bg-coffee-shop {
-    background-image: image-set( url("/imagenes_avif_rest/coffee_shop.avif") type("image/avif"), url("/imagenes_webp_rest/coffee_shop.webp") type("image/webp"), url("/imagenes/coffee_shop.jpg") type("image/jpeg") );
+    background-image: image-set( url("/public/imagenes_avif_rest/coffee_shop.avif") type("image/avif"), url("/public/imagenes_webp_rest/coffee_shop.webp") type("image/webp"), url("/public/imagenes/coffee_shop.jpg") type("image/jpeg") );
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
